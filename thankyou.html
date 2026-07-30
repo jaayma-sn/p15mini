@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commande confirmée</title>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1713652310456289');
+fbq('track','PageView');
+fbq('track','Purchase',{value:12000,currency:'XOF'});
+
+const params=new URLSearchParams(location.search);
+const wa=params.get('wa');
+setTimeout(()=>{ if(wa) location.href=decodeURIComponent(wa); },3000);
+</script>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#12140f;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh}
+.card{max-width:600px;padding:40px;border-radius:18px;background:#1c2814;text-align:center}
+h1{color:#78d326}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>✅ Merci pour votre commande !</h1>
+<p>Votre commande a bien été prise en charge.</p>
+<p>Notre livreur vous contactera très prochainement afin de confirmer votre commande et organiser la livraison.</p>
+<p><strong>Redirection vers WhatsApp…</strong></p>
+</div>
+</body>
+</html>

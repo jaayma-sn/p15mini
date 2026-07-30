@@ -627,7 +627,7 @@ src="https://www.facebook.com/tr?id=1713652310456289&ev=PageView&noscript=1"
     if (typeof fbq === 'function') { fbq('track', 'Lead'); }
     if (typeof gtag === 'function') { gtag('event', 'generate_lead', {method: 'form_whatsapp'}); }
 
-    window.open(url, '_blank');
+    window.location.href = 'thankyou.html?wa=' + encodeURIComponent(url);
   });
 
   // Suivi des clics directs WhatsApp / Wave (boutons hors formulaire)
